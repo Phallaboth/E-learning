@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg" id="nav1"> 
+            <div class="container-fluid justify-content-even me-5">
+                <a href="#" class="logo navbar-brand ms-5">
+                    <img src="./Image/Designer(color).png" alt="">
+                </a>
+                
+                <form class="d-flex justify-content-between gap-2">
+                    <input type="text" class="form-control shadow" placeholder="search">
+                    <button type="button" class="btn btn-primary rounded-4">Search</button>
+                </form>
+                
+                <button type="button" class="btn btn-primary rounded-4">Login</button>
+            </div>
+        </nav>
+
+
+        <nav id="nav2" class="navbar navbar-expand-lg bg-success fs-5">
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
+                <i class="bi bi-list-ul">Categories</i>
+            </button>
+
+            <div class="navbar-collapse collapse d-lg-flex justify-content-left ps-4" id="navbar">
+                    <ul class="navbar-nav gap-3">
+                        <li class="nav-items">
+                            <a href="#" class="nav-link active">Home</a>
+                        </li>
+
+                        <li class="nav-items dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Courses</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="./Course1.html" class="dropdown-item">1</a>
+                                </li>
+
+                                <li>
+                                    <a href="./Course2.html" class="dropdown-item">2</a>
+                                </li>                            
+
+                                <li>
+                                    <a href="./Course3.html" class="dropdown-item">3</a>
+                                </li>
+                            </ul>
+                        </li>       
+
+                        <li class="nav-items">
+                            <a href="#" class="nav-link">Contact</a>
+                        </li>
+
+                        <li class="nav-items">
+                            <a href="#" class="nav-link">About Us</a>
+                        </li>
+
+                    </ul>
+                                        
+                </div>
+        </nav>
+    </header>
+
+
+
+
+    <main>
+        <div class="title pt-3">
+            
+            <div class="left">
+                <h2>Grow up your skills by online courses with E-learning</h2>
+                <p>We believe  the world is more beautiful as each person gets more skills and know how to implement</p>
+            </div>
+            <div class="right">
+                <img class=" w-50" src="https://plus.unsplash.com/premium_photo-1683121884325-ee03e4be2589?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </div>
+        </div>
+
+        <h1 class="text-center pt-5">Our Courses</h1>
+
+        <div class="container-fluid text-center mt-5 d-lg-flex justify-content-center align-items-center gap-3">
+            <div class="row">
+                
+                <div class="col-lg-4 col-md-12 p-5 d-flex justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2048px-HTML5_logo_and_wordmark.svg.png" class="card-img-top object-fit-contain mt-3" style="height: 250px;" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Course 1</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                            <a href="./Pages/Course1.html" class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-12 p-5 d-flex justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://cdn.freebiesupply.com/logos/large/2x/css3-logo-png-transparent.png" class="card-img-top object-fit-contain" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Course 2</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                            <a href="./Pages/Course2.html" class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-12 p-5 d-flex justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://images.seeklogo.com/logo-png/25/1/javascript-logo-png_seeklogo-255387.png" class="card-img-top object-fit-contain" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Course 3</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                            <a href="./Pages/Course3.html" class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+    
+</body>
+</html>
+
+
+<!-- 
+
+
+                
+ -->
