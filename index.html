@@ -11,70 +11,64 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg" id="nav1"> 
-            <div class="container-fluid justify-content-even me-5">
-                <a href="#" class="logo navbar-brand ms-5">
-                    <img src="./Image/Designer(color).png" alt="">
+
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+
+                <a href="#" class="navbar-brand">
+                    <img style="height: 80px; width:80px" class="ms-5"
+                    src="./Image/Designer(color).png" alt="">
                 </a>
-                
-                <form class="d-flex justify-content-between gap-2">
-                    <input type="text" class="form-control shadow" placeholder="search">
-                    <button type="button" class="btn btn-primary rounded-4">Search</button>
-                </form>
-                
-                <button type="button" class="btn btn-primary rounded-4">Login</button>
-            </div>
-        </nav>
 
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav1">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-        <nav id="nav2" class="navbar navbar-expand-lg bg-success fs-5">
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
-                <i class="bi bi-list-ul">Categories</i>
-            </button>
+                <div class="navbar-collapse collapse justify-content-around" id="nav1">
 
-            <div class="navbar-collapse collapse d-lg-flex justify-content-left ps-4" id="navbar">
-                    <ul class="navbar-nav gap-3">
+                    <ul class="navbar-nav m-auto gap-3">
                         <li class="nav-items">
-                            <a href="#" class="nav-link active">Home</a>
-                        </li>
-
-                        <li class="nav-items dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Courses</a>
+                            <a href="./index.html" class="nav-link">Home</a>
+                        </li>                    
+                        
+                        <li class="navbar-items dropdown px-lg-2">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Courses</a>
                             <ul class="dropdown-menu">
-                                <li>
-                                    <a href="./Course1.html" class="dropdown-item">1</a>
-                                </li>
-
-                                <li>
-                                    <a href="./Course2.html" class="dropdown-item">2</a>
-                                </li>                            
-
-                                <li>
-                                    <a href="./Course3.html" class="dropdown-item">3</a>
-                                </li>
+                                <li><a href="./Pages/Course1.html" class="dropdown-item">1</a></li>
+                                <li><a href="./Pages/Course2.html" class="dropdown-item">2</a></li>
+                                <li><a href="./Pages/Course3.html" class="dropdown-item">3</a></li>
                             </ul>
-                        </li>       
+                        </li>                                                        
+                        
+                        <li class="nav-items">
+                            <a href="" class="nav-link">About Us</a>
+                        </li>                    
 
                         <li class="nav-items">
-                            <a href="#" class="nav-link">Contact</a>
-                        </li>
-
-                        <li class="nav-items">
-                            <a href="#" class="nav-link">About Us</a>
-                        </li>
+                            <a href="" class="nav-link">Contact</a>
+                        </li>                    
 
                     </ul>
-                                        
+
+                    <form class="d-flex gap-2">
+                        <input type="text" class="form-control bg-secondary-subtle shadow" placeholder="search">
+                        <button type="button" class="btn btn-outline-secondary btn-primary rounded-5 shadow">
+                            <i class="bi bi-search"> Search</i>
+                        </button>
+                    </form>
+
                 </div>
+
+            </div>
+
         </nav>
-    </header>
 
 
 
 
     <main>
-        <div class="title pt-3">
+        <div class="title container-fluid pt-3">
             
             <div class="left">
                 <h2>Grow up your skills by online courses with E-learning</h2>
@@ -129,16 +123,13 @@
     </main>
 
     <footer>
-
+        <h1>Footer</h1>
     </footer>
 
     
 </body>
 </html>
 
-
 <!-- 
 
-
-                
  -->
