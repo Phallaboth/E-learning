@@ -7,10 +7,15 @@ header{
     padding-left: 30px;
 
     & h3{
+        font-family:cursive;
         font-size: 30px;
     }
 }
 
-
+#course{
+    & h2{
+        font-family: fantasy;
+    }
+}
 
 
