@@ -2,9 +2,18 @@
     box-sizing: border-box;
 }
 
+.navbar{
+    background-color: rgb(255, 165, 0);
+    width: 98%;
+    height: 70px;
+    margin: auto;
+    border-radius: 20px;
+}
+
 /* Hero Page Style start */
 header{
-    background-color: rgb(243, 216, 151);
+    background-color: rgba(255, 254, 251, 0.811);
+    height: 520px;
     
     & .header-title{
         text-align: center;
@@ -27,10 +36,43 @@ header{
 
 /* Hero Page Style end */
 
+/* slider style start */
+.slider .item{
+    background-color: beige;
+    padding: 30px 0px;
+    margin: 5px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+/* slider style end */
 
 
 /* Screen Responsive start*/
-@media (min-width: 300px) and (max-width: 767px) {
+@media (min-width: 350px) {
+    header{
+        & .butt {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        & .header-title{
+            padding-top: 50px;
+            text-align: center;
+            line-height: 25px;
+            font-size: 15px;
+        }
+
+        & .image-fluid{
+            width: 240px;
+            margin-left: 18%;
+        }   
+    }
+}
+
+@media (min-width: 576px) {
     header{
         & .butt {
             display: flex;
@@ -47,15 +89,13 @@ header{
         }
 
         & .image-fluid{
-            width: 150px;
-            height: auto;
-            margin-left: 20px;
+            width: 50px;            
         }   
     }
 }
 
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     header{
         & .butt {
             display: flex;
@@ -64,21 +104,19 @@ header{
         }
 
         & .header-title{
-            margin-top: 20px;   
-            text-align: center;
-            line-height: 30px;
-            font-size: 20px;
+            margin-top: 20px;
+            text-align: center;   
+            line-height: 35px;
+            font-size: 30px;
         }
 
         & .image-fluid{
-            width: 400px;
-            height: auto;
-            margin-left: 20px;
+            width: 400px;            
         }   
     }
 }
 
-@media (max-width:992px) and (max-width: 1199px){
+@media (min-width:992px) and (max-width: 1199px){
     header{
         display: flex;
         margin: auto;
@@ -96,8 +134,7 @@ header{
         }
 
         & .image-fluid{
-            width: 400px;
-            height: auto;
+            width: 800px;            
             margin-left: 30px;
         }      
 
@@ -118,3 +155,6 @@ nav{
     }
 }
 
+/* Animations start*/
+
+/* Animations end */
