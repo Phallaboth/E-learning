@@ -4,10 +4,11 @@
 
 .navbar{
     background-color: rgb(255, 165, 0);
-    width: 98%;
-    height: 70px;
+    width: 100%;
+    height: 80px;
     margin: auto;
-    border-radius: 20px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
 
 /* Hero Page Style start */
@@ -22,6 +23,7 @@ header{
     }
 
     & .butt{
+        border: none;
         display: flex;
         justify-content: center;
         gap: 20px;
@@ -37,16 +39,24 @@ header{
 /* Hero Page Style end */
 
 /* slider style start */
-.slider .item{
-    background-color: beige;
-    padding: 30px 0px;
-    margin: 5px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+section{
+    position: relative;
+    width: 100%;
+    height: 250px;
 }
+.slider{
+    position: absolute;
+    width: 100%;
+    height: 150px;
+}
+
 /* slider style end */
 
+/* Cards start */
+.card-course{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* Cards end */
 
 /* Screen Responsive start*/
 @media (min-width: 350px) {
@@ -70,6 +80,27 @@ header{
             margin-left: 18%;
         }   
     }
+
+        section {
+            position: relative;
+            width: 100%;
+            height: 250px;
+        }
+    
+        .slider {
+            position: absolute;
+            width: 100%;
+            height: 100px;
+        }
+    
+        .slider .item {
+            padding: 10px 0px;
+            width: 20%;
+            text-align: center;
+            & img{
+                width: 20px;
+            }
+        }
 }
 
 @media (min-width: 576px) {
@@ -89,9 +120,10 @@ header{
         }
 
         & .image-fluid{
-            width: 50px;            
+            width: 200px;            
         }   
     }
+        
 }
 
 
@@ -116,7 +148,7 @@ header{
     }
 }
 
-@media (min-width:992px) and (max-width: 1199px){
+@media (min-width:992px){
     header{
         display: flex;
         margin: auto;
@@ -130,11 +162,11 @@ header{
             margin-top: 20px;
             text-align: center;
             line-height: 30px;
-            font-size: 20px;
+            font-size: 25px;
         }
 
         & .image-fluid{
-            width: 800px;            
+            width: 500px;            
             margin-left: 30px;
         }      
 
@@ -151,6 +183,7 @@ header{
 
 nav{
     & .btn:hover{
+        border: none;
         background-color: rgb(255, 115, 0);
     }
 }
