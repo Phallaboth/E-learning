@@ -33,7 +33,7 @@ const course = [
     {
         id:3,
         title:"Learn JavaScript",
-        teacher:"Rose Simmons",
+        teacher:"Rosita Julia",
         image:"https://1000logos.net/wp-content/uploads/2020/09/JavaScript-Logo-640x400.png",
         discription:"JavaScript is the programming language of the Web. It makes web pages interactive and dynamic.",
     },
