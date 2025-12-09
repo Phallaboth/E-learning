@@ -18,7 +18,7 @@ nav{
 header{
     background-color: rgba(245, 228, 179, 0.996);
     box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    height: 520px;
+    height: auto;
     
     & .header-title{
         text-align: center;
@@ -241,23 +241,25 @@ section{
     }
 
     /* search course start */
-    .searchcourse{
-        & .head input{            
-            height:10px;
+    .searchcourse{        
+        & .head input{     
+            width: 130px;               
+            height:25px;
             box-shadow: 0px 1px 2px black;
+            margin-right: 7px;
         }
         & .head button{            
-            height: 15px;
-            width: 20px;
+            height: 25px;
+            width: 25px;
             box-shadow: 0px 0.5px 1px black;
             position: relative;
         }
 
         & .head button i{
             position: absolute;
-            bottom: 7px;
-            left: 18px;
-            font-size: 15px;
+            bottom: 4px;
+            left:8px;
+            font-size: 10px;
         }
 
         & .head input:hover{
@@ -278,10 +280,10 @@ section{
             transition: 0.1 ease-in-out;
         }
 
-        & .head h3{            
-            left: 10px;
+        & .head h3{                 
+            left: 20px;              
             position: absolute;
-            font-size:12px;
+            font-size:13px;
             width: auto;
         }
     }
@@ -481,12 +483,22 @@ section{
     .searchcourse{        
         & .head input{                    
             right: -20px;
+            width: 250px;
+            height: 40px;
             box-shadow: 0px 1px 2px black;
         }
-        & .head button{       
-
+        & .head button{     
+            position: relative;  
+            width: 40px;
+            height: 40px;
             box-shadow: 0px 0.5px 1px black;            
         }        
+        & .head button i{
+            position: absolute;
+            font-size: 18px;
+            top: 8px;
+            left: 10px;
+        }
 
         & .head input:hover{
             border: 2px solid green;
@@ -507,9 +519,9 @@ section{
         }
 
         & .head h3{
-            left: 15px;
+            left: 150px;
             position: absolute;
-            font-size:25px;
+            font-size:22px;
             width: auto;
         }
     }
@@ -771,12 +783,21 @@ section{
             right: -30px;
             box-shadow: 0px 1px 2px black;
             height: 50px;
+            width: 300px;
         }
         & .head button{ 
-            height: 50px;      
+            position: relative;
+            height: 50px;
+            width: 50px;      
             right: -20px;
             box-shadow: 0px 0.5px 1px black;            
         }        
+
+        & .head button i{
+            position: absolute;
+            top: 10px;
+            left: 15px;
+        }
 
         & .head input:hover{
             border: 2px solid green;
@@ -797,9 +818,9 @@ section{
         }
 
         & .head h3{            
-            left: 35px;
+            left: 150px;
             position: absolute;
-            font-size:25px;
+            font-size:30px;
             width: auto;
         }
     }
