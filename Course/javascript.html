@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn JavaScript - E-Learning Course</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Reuse the same styling from your HTML course */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, #FFA500 0%, #FF8C00 100%);
+            padding: 15px 20px;
+            color: white;
+        }
+
+        .navbar h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .course-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 20px;
+            margin-bottom: 30px;
+        }
+
+        .course-header h1 {
+            margin-bottom: 10px;
+        }
+
+        .progress-bar-section {
+            margin-bottom: 20px;
+        }
+
+        .progress-text {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        .container-main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 40px;
+        }
+
+        .course-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        .main-content {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-player {
+            width: 100%;
+            height: 400px;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .lesson-content {
+            padding: 30px;
+        }
+
+        .lesson-title {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .lesson-description {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .lesson-code {
+            background: #f5f5f5;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            margin: 20px 0;
+            font-size: 0.9rem;
+        }
+
+        .lesson-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+        }
+
+        .btn-next {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s ease;
+            flex: 1;
+        }
+
+        .btn-next:hover {
+            background: #218838;
+            color: white;
+            text-decoration: none;
+        }
+
+        .btn-complete {
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s ease;
+            flex: 1;
+        }
+
+        .btn-complete:hover {
+            background: #0056b3;
+            color: white;
+        }
+
+        .btn-complete.completed {
+            background: #6c757d;
+            cursor: not-allowed;
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .sidebar-box {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .sidebar-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .lesson-item {
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .lesson-item:hover {
+            background: #e9ecef;
+        }
+
+        .lesson-item.active {
+            background: #667eea;
+            color: white;
+            border-left-color: #764ba2;
+            font-weight: 600;
+        }
+
+        .lesson-item.completed::before {
+            content: "✓";
+            font-weight: bold;
+            color: #28a745;
+            font-size: 1.2rem;
+        }
+
+        .lesson-item.active.completed::before {
+            color: white;
+        }
+
+        .instructor-box {
+            text-align: center;
+        }
+
+        .instructor-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 2rem;
+            margin: 0 auto 15px;
+        }
+
+        .instructor-name {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .instructor-title {
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        .course-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: #999;
+            margin-top: 5px;
+        }
+
+        .certificate {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            border-radius: 8px;
+            color: white;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .certificate.show {
+            display: block;
+        }
+
+        .certificate-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .course-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .video-player {
+                height: 250px;
+            }
+
+            .lesson-content {
+                padding: 20px;
+            }
+
+            .lesson-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Course Header -->
+    <div class="course-header">
+        <div class="container-main">
+            <h1>Learn JavaScript - Complete Guide</h1>
+            <p>Master the fundamentals of JavaScript programming</p>
+            <div class="progress-bar-section">
+                <div class="progress-text">
+                    <span>Your Progress</span>
+                    <span id="progressPercent">0%</span>
+                </div>
+                <div class="progress" style="height: 8px;">
+                    <div class="progress-bar" id="progressBar" role="progressbar" style="width: 0%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container-main">
+        <div class="course-layout">
+            <div class="main-content">
+                <div class="video-player" id="videoPlayer">🎥 Video Player</div>
+                <div class="lesson-content">
+                    <h2 class="lesson-title" id="lessonTitle">Welcome to JavaScript</h2>
+                    <div class="lesson-description" id="lessonDescription">Learn the basics of JavaScript...</div>
+                    <div id="lessonBody"></div>
+                    <div class="lesson-actions">
+                        <button class="btn-complete" id="completeBtn" onclick="completeLesson()">Mark as
+                            Complete</button>
+                        <button class="btn-next" id="nextBtn" onclick="nextLesson()" style="display: none;">Next Lesson
+                            →</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div class="sidebar-box">
+                    <div class="sidebar-title">📖 Course Lessons</div>
+                    <div id="lessonsList"></div>
+                </div>
+
+                <div class="sidebar-box instructor-box">
+                    <div class="sidebar-title">Instructor</div>
+                    <div class="instructor-avatar">JS</div>
+                    <div class="instructor-name">Alex</div>
+                    <div class="instructor-title">JavaScript Developer</div>
+                    <div class="course-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">5</div>
+                            <div class="stat-label">Lessons</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">1h 30m</div>
+                            <div class="stat-label">Duration</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-box certificate" id="certificateBox">
+                    <div class="certificate-icon">🎓</div>
+                    <strong>Congratulations!</strong>
+                    <p>You've completed the course</p>
+                    <button class="btn-next" onclick="downloadCertificate()">Download Certificate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const courseData = {
+            lessons: [
+                {
+                    id: 1,
+                    title: "Welcome to JavaScript",
+                    description: "Get started with JavaScript basics",
+                    videoEmoji: "https://youtu.be/W6NZfCO5SIk",
+                    content: `
+                        <p>JavaScript is the programming language of the web.</p>
+                        <ul>
+                            <li>Variables and data types</li>
+                            <li>Functions and events</li>
+                            <li>Console logging</li>
+                        </ul>
+                    `
+                },
+                {
+                    id: 2,
+                    title: "Variables and Data Types",
+                    description: "Learn about variables, strings, numbers, and booleans",
+                    videoEmoji: "https://youtu.be/W6NZfCO5SIk",
+                    content: `
+                        <p>Variables store data values.</p>
+                        <div class="lesson-code">
+let name = "John";<br>
+let age = 25;<br>
+let isStudent = true;
+                        </div>
+                    `
+                },
+                {
+                    id: 3,
+                    title: "Functions",
+                    description: "Understand how to write and call functions",
+                    videoEmoji: "https://youtu.be/W6NZfCO5SIk",
+                    content: `
+                        <p>Functions allow you to group code and reuse it.</p>
+                        <div class="lesson-code">
+function greet(name) {<br>
+&nbsp;&nbsp;console.log("Hello " + name);<br>
+}<br>
+greet("Alice");
+                        </div>
+                    `
+                },
+                {
+                    id: 4,
+                    title: "Conditionals",
+                    description: "Learn if, else if, and else statements",
+                    videoEmoji: "https://youtu.be/W6NZfCO5SIk",
+                    content: `
+                        <p>Conditionals let you execute code based on conditions.</p>
+                        <div class="lesson-code">
+let score = 80;<br>
+if(score >= 90) {<br>
+&nbsp;&nbsp;console.log("A");<br>
+} else if(score >= 70) {<br>
+&nbsp;&nbsp;console.log("B");<br>
+} else {<br>
+&nbsp;&nbsp;console.log("C");<br>
+}
+                        </div>
+                    `
+                },
+                {
+                    id: 5,
+                    title: "Loops",
+                    description: "Learn for, while, and forEach loops",
+                    videoEmoji: "https://youtu.be/W6NZfCO5SIk",
+                    content: `
+                        <p>Loops allow repetitive tasks to be automated.</p>
+                        <div class="lesson-code">
+for(let i = 0; i < 5; i++) {<br>
+&nbsp;&nbsp;console.log(i);<br>
+}<br>
+let j = 0;<br>
+while(j < 5) {<br>
+&nbsp;&nbsp;console.log(j);<br>
+&nbsp;&nbsp;j++;<br>
+}
+                        </div>
+                    `
+                }
+            ]
+        };
+
+        let currentLessonIndex = 0;
+        let completedLessons = new Set();
+
+        function initCourse() {
+            renderLessonsList();
+            loadLesson(0);
+        }
+
+        function renderLessonsList() {
+            const lessonsList = document.getElementById('lessonsList');
+            lessonsList.innerHTML = '';
+            courseData.lessons.forEach((lesson, index) => {
+                const lessonItem = document.createElement('div');
+                lessonItem.className = 'lesson-item';
+                if (index === currentLessonIndex) lessonItem.classList.add('active');
+                if (completedLessons.has(index)) lessonItem.classList.add('completed');
+
+                lessonItem.innerHTML = `<span>Lesson ${index + 1}</span><span style="flex:1; text-align:left;">${lesson.title}</span>`;
+                lessonItem.onclick = () => loadLesson(index);
+                lessonsList.appendChild(lessonItem);
+            });
+        }
+
+        function loadLesson(index) {
+            currentLessonIndex = index;
+            const lesson = courseData.lessons[index];
+
+            document.getElementById('videoPlayer').innerHTML = `
+                <iframe width="100%" height="100%" 
+                    src="${lesson.videoEmoji.replace("youtu.be/", "www.youtube.com/embed/")}" 
+                    title="${lesson.title}" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
+            `;
+
+            document.getElementById('lessonTitle').textContent = lesson.title;
+            document.getElementById('lessonDescription').textContent = lesson.description;
+            document.getElementById('lessonBody').innerHTML = lesson.content;
+
+            const completeBtn = document.getElementById('completeBtn');
+            const nextBtn = document.getElementById('nextBtn');
+
+            if (completedLessons.has(index)) {
+                completeBtn.textContent = '✓ Completed';
+                completeBtn.classList.add('completed');
+                completeBtn.disabled = true;
+            } else {
+                completeBtn.textContent = 'Mark as Complete';
+                completeBtn.classList.remove('completed');
+                completeBtn.disabled = false;
+            }
+
+            nextBtn.style.display = index < courseData.lessons.length - 1 ? 'block' : 'none';
+
+            renderLessonsList();
+            checkCourseCompletion();
+            window.scrollTo(0, 0);
+        }
+
+        function completeLesson() {
+            completedLessons.add(currentLessonIndex);
+            document.getElementById('completeBtn').textContent = '✓ Completed';
+            document.getElementById('completeBtn').classList.add('completed');
+            document.getElementById('completeBtn').disabled = true;
+            updateProgress();
+            renderLessonsList();
+            checkCourseCompletion();
+
+            if (currentLessonIndex < courseData.lessons.length - 1) {
+                document.getElementById('nextBtn').style.display = 'block';
+            }
+        }
+
+        function nextLesson() {
+            if (currentLessonIndex < courseData.lessons.length - 1) {
+                loadLesson(currentLessonIndex + 1);
+            }
+        }
+
+        function updateProgress() {
+            const completed = completedLessons.size;
+            const total = courseData.lessons.length;
+            const percentage = Math.round((completed / total) * 100);
+            document.getElementById('progressBar').style.width = percentage + '%';
+            document.getElementById('progressPercent').textContent = percentage + '%';
+        }
+
+        function checkCourseCompletion() {
+            const allCompleted = completedLessons.size === courseData.lessons.length;
+            const certificateBox = document.getElementById('certificateBox');
+            if (allCompleted) certificateBox.classList.add('show');
+            else certificateBox.classList.remove('show');
+        }
+
+        function downloadCertificate() {
+            alert(` Certificate Downloaded!\n\nCertificate of Completion\n\nYou have successfully completed the "Learn JavaScript" course!\n\nInstructor: Alex\nDate: ${new Date().toLocaleDateString()}`);
+        }
+
+        initCourse();
+    </script>
+</body>
+
+</html>
