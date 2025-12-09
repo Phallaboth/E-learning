@@ -242,16 +242,13 @@ section{
 
     /* search course start */
     .searchcourse{
-        & .head{
-            gap: 8px;
-        }
-        & .head input{
-            height:35px;
+        & .head input{            
+            height:10px;
             box-shadow: 0px 1px 2px black;
         }
         & .head button{            
-            height: 35px;
-            width: 30px;
+            height: 15px;
+            width: 20px;
             box-shadow: 0px 0.5px 1px black;
             position: relative;
         }
@@ -281,12 +278,48 @@ section{
             transition: 0.1 ease-in-out;
         }
 
-        & .head h3{
-            width: 100px;
-            font-size: 16px;
+        & .head h3{            
+            left: 10px;
+            position: absolute;
+            font-size:12px;
+            width: auto;
         }
     }
     /* search course end */
+
+    /* Feedback start */
+    .feedback{                  
+        display: flex;
+        justify-content: center;                
+        gap: 50px;        
+        & .person{            
+            border-radius: 50px;
+            box-shadow: 0 3px 8px gray;            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 300px;
+            height: 250px;
+            padding: 10px 10px;
+        }
+
+        & .person img{
+            width: 50px;
+        }
+
+        & .person .star{
+            font-size: 10px;
+        }
+        & .person .comments{
+            font-size: 13px;
+        }
+        & .person .signature{
+            font-size: 15px;
+        }
+    }       
+    /* Feedback end */
 
     .footer{
         padding-top: 20px;
@@ -439,25 +472,21 @@ section{
 
         & h3{      
             margin-top: -13px;  
-            font-size: 27px;            
+            font-size: 34px;    
+            width: auto;        
         }
     }
 
     /* Search Course */
-    .searchcourse{
-        & .head input{
-            height: 45px;
+    .searchcourse{        
+        & .head input{                    
+            right: -20px;
             box-shadow: 0px 1px 2px black;
         }
-        & .head button{            
-            height: 45px;
-            width: 30px;
-            box-shadow: 0px 0.5px 1px black;
-        }
+        & .head button{       
 
-        & .head button i{            
-            font-size: 20px;
-        }
+            box-shadow: 0px 0.5px 1px black;            
+        }        
 
         & .head input:hover{
             border: 2px solid green;
@@ -478,7 +507,10 @@ section{
         }
 
         & .head h3{
-            font-size: 20px;
+            left: 15px;
+            position: absolute;
+            font-size:25px;
+            width: auto;
         }
     }
     /* Search Course */
@@ -578,6 +610,44 @@ section{
         }
         
     }
+
+    /* Feedback start */
+    .feedback{          
+        gap: 40px;    
+        display: flex;
+        justify-content: center;                
+
+        & h3{
+            margin-top: -80px;
+        }
+        & .person{
+            margin-top: -20px;
+            border-radius: 50px;
+            box-shadow: 0 3px 8px gray;            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 40%;
+            height: 400px;
+            padding: 10px;
+        }
+
+         & .person img{
+            width: 80px;
+        }
+        & .person .star{
+            font-size: 15px;
+        }
+        & .person .comments{
+            font-size: 15px;
+        }
+        & .person .signature{
+            font-size: 20px;
+        }
+    }       
+    /* Feedback end */
 
     .footer{
         padding-top: 20px;
@@ -692,16 +762,20 @@ section{
         }
 
         & h3{
-            font-size: 30px;
+            font-size: 40px;
         }
     }
 
     .searchcourse{        
-        & .head input{    
+        & .head input{                    
+            right: -30px;
             box-shadow: 0px 1px 2px black;
+            height: 50px;
         }
-        & .head button{                        
-            box-shadow: 0px 0.5px 1px black;
+        & .head button{ 
+            height: 50px;      
+            right: -20px;
+            box-shadow: 0px 0.5px 1px black;            
         }        
 
         & .head input:hover{
@@ -722,8 +796,11 @@ section{
             transition: 0.1 ease-in-out;
         }
 
-        & .head h3{
-            font-size: 25px;
+        & .head h3{            
+            left: 35px;
+            position: absolute;
+            font-size:25px;
+            width: auto;
         }
     }
 
@@ -833,7 +910,43 @@ section{
         }
     }
     
-    
+    /* Feedback start */ 
+    .feedback{          
+        display: flex;
+        justify-content: center;                
+        & h3{
+            margin-top: 40px;
+            font-size: 35px;            
+        }
+        
+        & .person{
+            border-radius: 50px;
+            background-color: rgba(255, 255, 255, 0.858);
+            box-shadow: 0 3px 8px gray;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 37%;
+            height: 400px;
+            padding: 10px;
+        }
+            & .person img{
+                width: 90px;
+            }
+        & .person .star{
+            font-size: 20px;
+        }
+        & .person .comments{
+            font-size: 18px;
+        }
+        & .person .signature{
+            font-size: 25px;
+        }
+    }       
+    /* Feedback end */
+
     .footer{
         padding-top: 20px;
         margin: auto;

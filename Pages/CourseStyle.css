@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+}
+
+.navbar{
+    background-color: rgb(255, 165, 0);    
+    height: 80px;
+}
+
+nav{
+    & .btn:hover{
+        border: none;
+        background-color: rgb(255, 115, 0);
+    }
+}

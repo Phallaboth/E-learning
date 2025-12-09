@@ -14,3 +14,21 @@ $('.owl-carousel').owlCarousel({
         }
     }
 })
+$('.feeds').owlCarousel({
+    loop:false,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        50:{
+            items:3
+        },
+        100:{
+            items:5
+        }
+    }
+})
+
+
