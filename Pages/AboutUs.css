@@ -15,17 +15,17 @@ nav{
 }
 
 
-section{
-    position: relative;
+section{    
     width: 100%;
     height: 250px;
+    background-color: red;
 }
 .slider{
-    cursor: pointer;
-    position: absolute;
+    cursor: pointer;    
     width: 100%;
     height: 150px;
 }
+
 
 header{
     margin-top: 40px;
@@ -59,6 +59,11 @@ header{
 
 }
 
+
+.profile .prof:hover{
+    transform: translateY(-1.1rem);
+    transition: 0.3s ease;
+}
 
 @media (min-width:350px){
 
@@ -149,41 +154,156 @@ header{
     }
 
 
-
-    section {
-        position: relative;
-        width: 100%;
-        height: 250px;
-    }
+        .guide {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            height: 400px;
+            margin-bottom: -100px;
     
-    .slide{
-        border-radius: 20px;    
-        margin: auto;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        width: 95%;
-        height: 100px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center ;        
-        
-        & .slider{            
-            height: 100px;
-            width: 100%;                          
-        }
-        & .slider .item {
-            
-            & img{
-                margin-top: 10px;          
-                width: 45px;
-                margin-left: 10px;
+            & .up {
+                height: 20%;
+                width: 100%;
+                border-bottom: 3px solid green;
+            }
+    
+            & .up h2 {
+                font-size: 25px;
+            }
+    
+            & .down {
+                height: 50%;
+                width: 100%;
+                border-bottom: 3px solid green;
+            }
+    
+            & .left {
+                border-radius: 15px;
+                width: 33%;
+                height: 160px;
+                box-shadow: 2px 5px 8px 0 rgba(0, 0, 0, 0.2);
+            }
+    
+            & .left button {
+                position: absolute;
+                left: 10px;
+                top: 10px;
+                padding: 2px 8px;
+                border: none;
+            }
+    
+            & .left button i {
+                font-size: 10px;
+            }
+    
+            & .right button i {
+                font-size: 10px;
+            }
+    
+            & .mid button i {
+                font-size: 10px;
+            }
+    
+            & .mid {
+                border-radius: 15px;
+                width: 33%;
+                height: 160px;
+                box-shadow: 2px 5px 8px 0 rgba(0, 0, 0, 0.2);
+            }
+    
+            & .mid button {
+                position: absolute;
+                left: 10px;
+                top: 10px;
+                padding: 2px 8px;
+                border: none;
+            }
+    
+            & .right {
+                border-radius: 15px;
+                width: 33%;
+                height: 160px;
+                box-shadow: 2px 5px 8px 0 rgba(0, 0, 0, 0.2);
+            }
+    
+            & .right button {
+                position: absolute;
+                left: 10px;
+                top: 10px;
+                padding: 2px 8px;
+                border: none;
+            }
+    
+            .arrow {
+                font-size: 10px;
+                color: rgb(255, 165, 0);
+            }
+    
+            & .info {
+                font-size: 10px;
+                width: 90%;
+                position: absolute;
+                top: 50px;
+                left: 5px;
+            }
+    
+            & .info h4 {
+                font-size: 12px;
+                font-weight: bold;
+            }
+    
+            & .left:hover {
+                transform: translateY(-0.8rem);
+                transition: 0.2s ease-out;
+            }
+    
+            & .mid:hover {
+                transform: translateY(-0.8rem);
+                transition: 0.2s ease-out;
+            }
+    
+            & .right:hover {
+                transform: translateY(-0.8rem);
+                transition: 0.2s ease-out;
             }
         }
 
-        & h3{margin-top: 10px;
-            font-size: 17px;
+
+
+    
+
+        .feedback {            
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+
+            & .person {
+                border-radius: 50px;
+                box-shadow: 0 3px 8px gray;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                width: 300px;
+                height: 250px;
+                padding: 10px 10px;
+            }
+    
+            & .person img {
+                width: 50px;
+            }
+    
+            & .person .star {
+                font-size: 10px;
+            }
+    
+            & .person .comments {
+                font-size: 13px;
+            }
+    
+            & .person .signature {
+                font-size: 15px;
+            }
         }
-    }
 
     .footer{
         padding-top: 20px;
@@ -238,6 +358,42 @@ header{
             background-color: rgb(255, 115, 0);
             border: none;
         }
+    }
+
+
+    .profile{
+        
+        height: auto; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;               
+
+        & .prof{            
+            width: 32%;
+            padding: 15px;
+            height: auto;            
+            border-radius: 20px;
+        }
+
+        & .prof .text h4{
+            font-size: 12px;
+            text-align: center;
+        }
+
+        & .prof .text p{
+            font-size: 8px;
+            text-align: center;
+        }
+
+        & .prof img{   
+            margin-left: -10%;
+            border-radius: 20px;     
+            width: 120px;
+
+        }
+
+
     }
 }
 
@@ -328,35 +484,173 @@ header{
         }
     }
 
-
-    .slide{
-        border-radius: 20px;
-        margin: auto;        
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        width: 90%;
-        height: 150px;
+    .profile{
+        height: auto; 
         display: flex;
-        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        justify-content: center ;
+        gap: 100px;               
 
-        & .slider{
-            height: 120px;
-            width: 100%;            
-        }
-        & .slider .item {            
-            & img{                
-                margin-top: 5px;
-                width: 70px;
-            }
+        & .prof{            
+            width: 32%;
+            height: auto;            
+            border-radius: 20px;
         }
 
-        & h3{      
-            margin-top: -13px;  
-            font-size: 34px;    
-            width: auto;        
+        & .prof .text h4{
+            font-size: 20px;
+            text-align: center;
+        }
+
+        & .prof .text p{
+            font-size: 15px;
+            text-align: center;
+        }
+
+        & .prof img{   
+            margin-left: 5%;
+            border-radius: 20px;     
+            width: 200px;
+
         }
     }
+
+        .guide {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            height: 400px;
+            margin-bottom: -10px;
+    
+            & .up {
+                height: 20%;
+                width: 100%;
+                border-bottom: 4px solid green;
+            }
+    
+            & .up h2 {
+                font-size: 30px;
+            }
+    
+            & .down {
+                height: 50%;
+                width: 100%;
+                border-bottom: 4px solid green;
+            }
+    
+            & .left {
+                border-radius: 20px;
+                width: 30%;
+                height: 170px;
+                box-shadow: 2px 5px 8px 0 rgba(0, 0, 0, 0.2);
+            }
+    
+            & .left button {
+                position: absolute;
+                left: 20px;
+                top: 30px;
+                padding: 8px 12px;
+                border: none;
+            }
+    
+            & .mid {
+                border-radius: 30px;
+                width: 30%;
+                height: 170px;
+                box-shadow: 2px 5px 8px 0 rgba(0, 0, 0, 0.2);
+            }
+    
+            & .mid button {
+                position: absolute;
+                left: 20px;
+                top: 30px;
+                padding: 8px 12px;
+                border: none;
+            }
+    
+            & .right {
+                border-radius: 30px;
+                width: 30%;
+                height: 170px;
+                box-shadow: 2px 5px 8px 0 rgba(0, 0, 0, 0.2);
+            }
+    
+            & .right button {
+                position: absolute;
+                left: 20px;
+                top: 30px;
+                padding: 8px 12px;
+                border: none;
+            }
+    
+            .arrow {
+                font-size: 25px;
+                color: rgb(255, 165, 0);
+            }
+    
+            & .info {
+                font-size: 12px;
+                width: 90%;
+                position: absolute;
+                top: 80px;
+                left: 20px;
+            }
+    
+            & .info h4 {
+                font-size: 17px;
+            }
+    
+            & .left:hover {
+                transform: translateY(-1.1rem);
+                transition: 0.3s ease-out;
+            }
+    
+            & .mid:hover {
+                transform: translateY(-1.1rem);
+                transition: 0.3s ease-out;
+            }
+    
+            & .right:hover {
+                transform: translateY(-1.1rem);
+                transition: 0.3s ease-out;
+            }
+    
+        }
+
+    .feedback{          
+        gap: 40px;    
+        display: flex;
+        justify-content: center;                
+
+        & h3{
+            margin-top: -80px;
+        }
+        & .person{
+            margin-top: -20px;
+            border-radius: 50px;
+            box-shadow: 0 3px 8px gray;            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 40%;
+            height: 400px;
+            padding: 10px;
+        }
+
+         & .person img{
+            width: 80px;
+        }
+        & .person .star{
+            font-size: 15px;
+        }
+        & .person .comments{
+            font-size: 15px;
+        }
+        & .person .signature{
+            font-size: 20px;
+        }
+    }       
+
 
 
     .footer{
@@ -503,40 +797,181 @@ header{
                 
     }
 
-    .slide{
-        border-radius: 30px;    
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        width: 90%;
-        height: 200px;
+    .guide{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        height: 450px;
+
+        & .up{
+            height: 20%;
+            width: 100%;
+        }
+        & .up h2{
+            font-size: 50px;
+            border-bottom: 4px solid green;
+        }
+
+        & .down{
+            border-bottom: 4px solid green;
+            height: 80%;
+            width: 100%;        
+        }
+
+        & .left{
+            border-radius: 30px;
+            width: 25%;
+            height: 300px ;
+            box-shadow:2px 5px 8px 0 rgba(0, 0, 0, 0.2) ;
+        }
+
+        & .left button{
+            position: absolute;
+            left: 40px;
+            top:60px;
+            padding: 15px 20px;
+            border: none;
+        }
+        
+        & .mid{
+            border-radius: 30px;
+            width: 25%;
+            height: 300px ;
+            box-shadow:2px 5px 8px 0 rgba(0, 0, 0, 0.2) ;
+        }
+
+        & .mid button{
+            position: absolute;
+            left: 40px;
+            top:60px;
+            padding: 15px 20px;
+            border: none;
+        }
+
+        & .right{
+            border-radius: 30px;
+            width: 25%;
+            height: 300px ;
+            box-shadow:2px 5px 8px 0 rgba(0, 0, 0, 0.2) ;
+        }
+
+        & .right button{
+            position: absolute;
+            left: 40px;
+            top:60px;
+            padding: 15px 20px;
+            border: none;
+        }
+        
+        .arrow{
+            font-size: 35px;
+            color: rgb(255, 165, 0);
+        }
+
+        & .info{
+            width: 80%;
+            position: absolute;
+            top: 150px;
+            left: 20px;
+            font-size: 20px;
+        }
+
+        & .left button i{
+            font-size: 25px;
+        }
+        & .right button i{
+            font-size: 25px;
+        }
+        & .mid button i{
+            font-size: 25px;
+        }
+
+        & .info h4{
+            font-size: 20px;
+        }
+
+
+        & .left:hover{
+            transform: translateY(-0.8rem);
+            transition: 0.2s ease-out ;        
+        }
+        & .mid:hover{
+            transform: translateY(-0.8rem);
+            transition: 0.2s ease-out ;    
+        }
+        & .right:hover{
+            transform: translateY(-0.8rem);
+            transition: 0.2s ease-out ;    
+        }
+    }
+
+    .feedback {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center ;
-        padding-bottom: 20px;
-
-        & h3{            
-            padding-bottom: 10px;            
+        justify-content: center;
+    
+        & h3 {
+            margin-top: 40px;
+            font-size: 35px;
         }
-        & .slider{                  
-            margin-top: 10px; 
-            height: 180px;
-            width: 100%;    
-            padding-bottom: 10px;        
+    
+        & .person {
+            border-radius: 50px;
+            background-color: rgba(255, 255, 255, 0.858);
+            box-shadow: 0 3px 8px gray;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 37%;
+            height: 400px;
+            padding: 10px;
         }
-        & .slider .item {
-            & img{
-                padding-bottom: 50px;
-                margin-left: 60px;                                                
-                width: 110px;
-            }
+    
+        & .person img {
+            width: 90px;
         }
-
-        & h3{
-            font-size: 40px;
+    
+        & .person .star {
+            font-size: 20px;
+        }
+    
+        & .person .comments {
+            font-size: 18px;
+        }
+    
+        & .person .signature {
+            font-size: 25px;
         }
     }
 
 
+    .profile{
+        height: auto; 
+        display: flex;
+        gap: 150px;       
+
+        & .prof{            
+            width: 35%;
+            height: auto;            
+            border-radius: 20px;
+        }
+
+        & .prof .text h4{
+            font-size: 30px;
+            text-align: center;
+        }
+
+        & .prof .text p{
+            font-size: 18px;
+            text-align: center;
+        }
+
+        & .prof img{   
+            margin-left: 5%;
+            border-radius: 20px;     
+            width: 300px;
+
+        }
+    }
 
     .footer{               
         padding-top: 20px;
